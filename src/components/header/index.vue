@@ -40,6 +40,10 @@
             name: 'Blog发展'
           },
           {
+            path: '/comment',
+            name: '留言'
+          },
+          {
             path: '/about',
             name: '关于我'
           }

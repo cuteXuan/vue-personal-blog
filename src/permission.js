@@ -11,6 +11,7 @@ const whiteList =
   '/document',
    '/essay',
    '/process',
+    '/comment',
    '/about',
    '/detail',
     '/label'

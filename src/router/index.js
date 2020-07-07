@@ -49,6 +49,12 @@ export const constantRoutes = [
         name: 'process',
         component: () => import('../views/process')
       },
+      // 留言
+      {
+        path: '/comment',
+        name: 'comment',
+        component: () => import('../views/comment')
+      },
       {
         // 关于我的页面
         path: '/about',
