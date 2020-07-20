@@ -55,7 +55,10 @@
 <style lang="scss"  scoped>
   .section {
     width: 1150px;
-    margin: 80px auto 70px;
-    min-height: 600px;
+    /*margin: 80px auto 70px;*/
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 70px;
+    /*min-height: 700px;*/
   }
 </style>

@@ -1,15 +1,15 @@
 <template>
   <div class="comment-page">
-    <h1 class="title">博客更新日志</h1>
-    <Commit/>
+    <h1 class="title">博客留言</h1>
+    <Comment :commentType="blogComment"/>
   </div>
 </template>
 
 <script>
-  import Commit from '../components/comment/comment'
+  import Comment from '../components/comment/comments'
   export default {
     components: {
-      Commit
+      Comment
     }
   }
 </script>

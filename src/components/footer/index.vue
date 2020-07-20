@@ -11,6 +11,11 @@
 <style lang="scss"  scoped>
   .footer {
     width: 100%;
+    /*display: flex;*/
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 9999;
     height: 60px;
     text-align: center;
     line-height: 60px;

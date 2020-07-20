@@ -8,12 +8,15 @@
 <!--      </div>-->
       <mavon-editor class="content" v-html="detail.content_html">
       </mavon-editor>
+<!--      <h1 class="comment-title">精选评论</h1>-->
+      <Comment :commentType="detail._id"/>
     </div>
 </template>
 
 <script>
   import { getArticle } from '../../api/article'
   import Introduction from './introduction'
+  import Comment from '../comment/comments'
   export default {
     data() {
       return {
@@ -42,7 +45,8 @@
       }
     },
     components: {
-      Introduction
+      Introduction,
+      Comment
     }
   }
 </script>
@@ -63,6 +67,19 @@
     }
     .content {
       padding: 20px;
+      margin-bottom: 15px;
+    }
+    .comment-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-left: 12px;
+      border-left: 4px solid #ec7259;
+      font-size: 18px;
+      font-weight: 500;
+      height: 20px;
+      line-height: 20px;
     }
   }
 

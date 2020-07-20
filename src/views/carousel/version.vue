@@ -19,6 +19,9 @@
         property="data_time"
         label="创建时间"
       >
+        <template slot-scope="scope">
+          {{scope.row.data_time | formatTime}}
+        </template>
       </el-table-column>
       <el-table-column
         property="version_content"
