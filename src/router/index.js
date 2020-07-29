@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 import Layout from '../layout/index'
 // 后台管理模板
 import management from '../layout/management'
+// 经典布局
+import classic from '../layout/classic'
 // 首页
 import index from '../views/index.vue'
 
@@ -55,6 +57,12 @@ export const constantRoutes = [
         name: 'comment',
         component: () => import('../views/comment')
       },
+      // 工具
+      {
+        path: '/tools',
+        name: 'tools',
+        component: () => import('../views/tools/tool')
+      },
       {
         // 关于我的页面
         path: '/about',
@@ -83,9 +91,16 @@ export const constantRoutes = [
     component: () => import('../views/login/register')
   },
   {
-    path: '/essays/write',
-    name: 'write',
-    component: () => import('../views/essays/write')
+    path: '/classic',
+    redirect: '/tools/rgb',
+    component: classic,
+    children: [
+      {
+        path: '/tools/rgb',
+        name: 'rgb',
+        component: () => import('../views/tools/rgb')
+      }
+    ]
   }
   // },
   // {
@@ -180,6 +195,13 @@ export const asyncRoutes = [
         meta: { title: '版本管理', icon: 'el-icon-warning-outline', roles: ['admin', 'editor'] }
       }
     ]
+  },
+  // 写文章
+  {
+    path: '/essays/write',
+    name: 'write',
+    meta: { roles: ['admin', 'editor'] },
+    component: () => import('../views/essays/write')
   }
 ]
 

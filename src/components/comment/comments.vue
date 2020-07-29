@@ -87,6 +87,7 @@
       clear: both;
       width: 95%;
       margin: 15% auto 6%;
+      padding-bottom: 15px;
       .article-comment-word {
         font-size: 17px;
         color: #db6d4c;

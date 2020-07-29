@@ -44,6 +44,10 @@
             name: '留言'
           },
           {
+            path: '/tools',
+            name: '小工具'
+          },
+          {
             path: '/about',
             name: '关于我'
           }
@@ -63,7 +67,7 @@
     top: 0;
     z-index: 9999;
     .header-box {
-      width: 1000px;
+      width: 1100px;
       margin: 0 auto;
       display: flex;
       .logo {
