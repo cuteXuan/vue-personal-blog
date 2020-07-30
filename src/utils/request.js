@@ -1,9 +1,11 @@
 import axios from 'axios'
 import store from '@/store'
 import { getToken } from './auth'
-import { reqPath } from './path'
+// import { reqPath } from './path'
+console.log(process.env.NODE_ENV)
+console.log(process.env.VUE_APP_API)
 const service = axios.create({
-  baseURL: reqPath,
+  baseURL: process.env.VUE_APP_API,
   timeout: 5000
 })
 

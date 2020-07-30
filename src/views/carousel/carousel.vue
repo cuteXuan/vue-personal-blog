@@ -67,7 +67,6 @@
 <script>
   import { queryAllCarousel, carouselAdd, carouselDelete, carouselUpdate } from '../../api/carousel'
   import UploadImg from '../../components/uploadImg/index'
-  import { upPath, reqPath } from '../../utils/path'
   export default {
     data() {
       return {
@@ -95,8 +94,8 @@
       UploadImg
     },
     created() {
-      this.url = upPath
-      this.action = reqPath + 'upload/carousel'
+      this.url = process.env.VUE_APP_UPLOAD
+      this.action = process.env.VUE_APP_API + 'upload/carousel'
       this.getAllCarousel()
     },
     methods: {

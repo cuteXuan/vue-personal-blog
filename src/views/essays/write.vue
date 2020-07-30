@@ -76,7 +76,6 @@
 </template>
 
 <script>
-  import { reqPath } from '../../utils/path'
   import { publishArticle, getArticle, upArticle } from '../../api/article'
   import { queryAllLabel, labelAdd } from '../../api/label'
   import UploadImg from '../../components/uploadImg/index'
@@ -174,7 +173,7 @@
     },
     created() {
       // action 地址
-      this.action = reqPath + 'upload/cover'
+      this.action = process.env.VUE_APP_API + 'upload/cover'
       const { id, title } = this.$route.query
       console.log(id, title)
       if (id) {

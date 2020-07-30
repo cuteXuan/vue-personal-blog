@@ -10,7 +10,6 @@
 
 <script>
   import { queryAllCarousel } from '../api/carousel'
-  import { upPath } from '../utils/path'
 
   export default {
     data() {
@@ -20,7 +19,7 @@
       }
     },
     created () {
-      this.url = upPath
+      this.url = process.env.VUE_APP_UPLOAD
       this.getCarousel()
     },
     methods: {

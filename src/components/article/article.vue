@@ -28,7 +28,6 @@
 
 <script>
   import { queryAll, queryByLabel } from '../../api/article'
-  import { upPath } from '../../utils/path'
   import Introduction from './introduction'
   // 分页
   import Pagination from '../pagination'
@@ -61,7 +60,7 @@
       }
     },
     mounted() {
-      this.url = upPath
+      this.url = process.env.VUE_APP_UPLOAD
       this.getUrlHash()
       this.getArticle()
     },
